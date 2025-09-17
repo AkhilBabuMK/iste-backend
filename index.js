@@ -30,6 +30,11 @@ app.get("/check", (req, res) => {
   return res.json({ valid: isValid });
 });
 
+app.get("/health", (req, res) => {
+  res.send("OK");
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
